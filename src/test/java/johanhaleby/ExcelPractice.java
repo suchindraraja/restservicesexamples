@@ -43,6 +43,11 @@ public class ExcelPractice
 			sh.getRow(i).createCell(nouc+3).setCellValue("Done");	
 		}
 		
+		sh.autoSizeColumn(nouc);
+		sh.autoSizeColumn(nouc+1);
+		sh.autoSizeColumn(nouc+2);
+		sh.autoSizeColumn(nouc+3);
+		
 		//Save data back to excel
 		FileOutputStream fo=new FileOutputStream(f);
 		wb.write(fo);
